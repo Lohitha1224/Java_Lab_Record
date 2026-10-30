@@ -1,0 +1,31 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class Shapes extends JPanel {
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+
+        // Draw rectangle
+        g.drawRect(50, 50, 100, 60);
+
+        // Draw circle
+        g.drawOval(200, 50, 80, 80);
+
+        // Draw line
+        g.drawLine(50, 160, 150, 160);
+
+        // Draw triangle
+        g.drawLine(200, 200, 250, 120);
+        g.drawLine(250, 120, 300, 200);
+        g.drawLine(200, 200, 300, 200);
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Geometric Figures");
+        frame.add(new Shapes());
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
